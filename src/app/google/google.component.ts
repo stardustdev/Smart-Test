@@ -11,4 +11,5 @@ export class GoogleComponent implements OnInit {
 
   ngOnInit() {
   }
+
 }
