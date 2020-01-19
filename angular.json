@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "Smart": {
+    "smart": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/Smart",
+            "outputPath": "dist/smart",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -61,18 +61,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "Smart:build"
+            "browserTarget": "smart:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "Smart:build:production"
+              "browserTarget": "smart:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "Smart:build"
+            "browserTarget": "smart:build"
           }
         },
         "test": {
@@ -106,7 +106,7 @@
         }
       }
     },
-    "Smart-e2e": {
+    "smart-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "prefix": "",
@@ -115,11 +115,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "Smart:serve"
+            "devServerTarget": "smart:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "Smart:serve:production"
+              "devServerTarget": "smart:serve:production"
             }
           }
         },
@@ -135,5 +135,5 @@
       }
     }
   },
-  "defaultProject": "Smart"
+  "defaultProject": "smart"
 }
