@@ -1,22 +1,33 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { SearchService } from './search.service';
+import { DataService } from './service/data.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
+  styleUrls: ['./app.component.css'],
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
+  data: any;
   title = 'smart';
-  searchKey = '';
-  searchMethod;
+  checkedVal = { options: 'google' };
 
-  constructor(private router: Router, private searchService: SearchService) {}
+  searchStr = '';
 
-  onSearch() {
-    this.router.navigateByUrl('/google').then(() => {
-      this.searchService.search(this.searchKey);
-    });
+  constructor(private router: Router, private messegeService: DataService) {}
+
+  ngOnInit() {
+    this.messegeService.currentData.subscribe(data => (this.data = data));
+    console.log(this.checkedVal.options);
+  }
+
+  search() {
+    console.log('search string: ', this.searchStr);
+    this.messegeService.passData({ name: this.searchStr });
+    if (this.checkedVal.options === 'google') {
+      this.router.navigate(['/google']);
+    } else {
+      this.router.navigate(['/bing']);
+    }
   }
 }

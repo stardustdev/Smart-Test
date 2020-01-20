@@ -6,12 +6,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { GoogleComponent } from './google/google.component';
 import { BingComponent } from './bing/bing.component';
-import { SearchService } from './search.service';
+import { DataService } from './service/data.service';
 
 @NgModule({
   declarations: [AppComponent, GoogleComponent, BingComponent],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
-  providers: [SearchService],
+  providers: [DataService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

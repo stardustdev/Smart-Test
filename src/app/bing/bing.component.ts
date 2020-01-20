@@ -1,14 +1,16 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../service/data.service';
 
 @Component({
   selector: 'app-bing',
   templateUrl: './bing.component.html',
-  styleUrls: ['./bing.component.scss'],
+  styleUrls: ['./bing.component.css'],
 })
 export class BingComponent implements OnInit {
-  searchKey;
+  data: any;
+  constructor(private messegeService: DataService) {}
 
-  constructor() {}
-
-  ngOnInit() {}
+  ngOnInit() {
+    this.messegeService.currentData.subscribe(data => (this.data = data));
+  }
 }

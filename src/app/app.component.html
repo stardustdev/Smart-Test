@@ -1,15 +1,33 @@
-<!--The content below is only a placeholder and can be replaced.-->
+{{ title }}
 <div>
-  <h3>Search</h3>
+  <p>Search Component</p>
   <div>
-    Search
-    <input type="text" [(ngModel)]="searchKey" />
-    <button (click)="onSearch()">Search</button>
+    <p>
+      Search for:
+      <input
+        type="text"
+        placeholder="Search"
+        [(ngModel)]="searchStr"
+        (keyup.enter)="search()"
+      />
+    </p>
   </div>
   <div>
-    <input type="radio" value="google" [(ngModel)]="searchMethod" checked />
-    Google <input type="radio" value="bing" [(ngModel)]="searchMethod" /> Bing
+    <p>
+      <input
+        type="radio"
+        name="search"
+        [(ngModel)]="checkedVal.options"
+        value="google"
+        checked="checked"
+      />Google
+      <input
+        type="radio"
+        name="search"
+        [(ngModel)]="checkedVal.options"
+        value="bing"
+      />Bing
+    </p>
   </div>
 </div>
-
 <router-outlet></router-outlet>

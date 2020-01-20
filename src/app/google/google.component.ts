@@ -1,16 +1,16 @@
 import { Component, OnInit } from '@angular/core';
-import { SearchService } from '../search.service';
+import { DataService } from '../service/data.service';
 
 @Component({
   selector: 'app-google',
   templateUrl: './google.component.html',
-  styleUrls: ['./google.component.scss'],
-  providers: [SearchService],
+  styleUrls: ['./google.component.css'],
 })
 export class GoogleComponent implements OnInit {
-  searchKey;
+  data: any;
+  constructor(private messegeService: DataService) {}
 
-  constructor(private searchService: SearchService) {}
-
-  ngOnInit() {}
+  ngOnInit() {
+    this.messegeService.currentData.subscribe(data => (this.data = data));
+  }
 }
