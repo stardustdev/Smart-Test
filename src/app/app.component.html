@@ -3,12 +3,12 @@
   <h3>Search</h3>
   <div>
     Search
-    <input type="text" />
+    <input type="text" [(ngModel)]="searchKey" />
     <button (click)="onSearch()">Search</button>
   </div>
   <div>
-    <option value="1">Google</option>
-    <option value="2">Bing</option>
+    <input type="radio" value="google" [(ngModel)]="searchMethod" checked />
+    Google <input type="radio" value="bing" [(ngModel)]="searchMethod" /> Bing
   </div>
 </div>
 

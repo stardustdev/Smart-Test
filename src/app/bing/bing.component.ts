@@ -3,9 +3,11 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-bing',
   templateUrl: './bing.component.html',
-  styleUrls: ['./bing.component.scss']
+  styleUrls: ['./bing.component.scss'],
 })
 export class BingComponent implements OnInit {
+  searchKey;
+
   constructor() {}
 
   ngOnInit() {}
