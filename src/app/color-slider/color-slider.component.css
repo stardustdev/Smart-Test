@@ -4,10 +4,19 @@
   margin-top: 50px;
   padding: 10px;
   text-align: center;
-  width: 20%;
+  width: 400px;
 }
 
-span {
-  margin-right: 5px;
+.color-container {
+  width: 100%;
+}
+
+.title {
+  margin-top: 5px;
   text-align: right;
+}
+
+.color-value {
+  text-align: left;
+  margin-top: 5px;
 }

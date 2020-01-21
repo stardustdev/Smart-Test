@@ -8,9 +8,9 @@ import { ColorModel } from '../model/color.model';
   styleUrls: ['./color-slider.component.css'],
 })
 export class ColorSliderComponent implements OnInit {
-  redValue = 255;
-  greenValue = 255;
-  blueValue = 255;
+  redValue = 0;
+  greenValue = 0;
+  blueValue = 0;
 
   color: ColorModel;
 

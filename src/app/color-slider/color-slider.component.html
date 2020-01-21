@@ -1,33 +1,41 @@
 <div class="container">
-  <div>
-    <span>Red:</span>
-    <input
-      type="range"
-      min="0"
-      max="255"
-      [(ngModel)]="redValue"
-      (input)="adjustColor()"
-    />
-  </div>
-  <div>
-    <span>Green:</span>
-    <input
-      type="range"
-      min="0"
-      max="255"
-      [(ngModel)]="greenValue"
-      (input)="adjustColor()"
-    />
-  </div>
-  <div>
-    <span>Blue:</span>
-    <input
-      type="range"
-      min="0"
-      max="255"
-      [(ngModel)]="blueValue"
-      (input)="adjustColor()"
-    />
+  <div class="color-container">
+    <div class="row">
+      <label class="title col-3">Red:</label>
+      <input
+        class="col-6"
+        type="range"
+        min="0"
+        max="255"
+        [(ngModel)]="redValue"
+        (input)="adjustColor()"
+      />
+      <label class="color-value col-3">{{ redValue }}</label>
+    </div>
+    <div class="row">
+      <label class="title col-3">Green:</label>
+      <input
+        class="col-6"
+        type="range"
+        min="0"
+        max="255"
+        [(ngModel)]="greenValue"
+        (input)="adjustColor()"
+      />
+      <label class="color-value col-3">{{ greenValue }}</label>
+    </div>
+    <div class="row">
+      <label class="title col-3">Blue:</label>
+      <input
+        class="col-6"
+        type="range"
+        min="0"
+        max="255"
+        [(ngModel)]="blueValue"
+        (input)="adjustColor()"
+      />
+      <label class="color-value col-3">{{ blueValue }}</label>
+    </div>
   </div>
   <router-outlet></router-outlet>
 </div>
