@@ -1,0 +1,15 @@
+.container {
+  border: 1px solid black;
+  margin: auto;
+  text-align: center;
+  width: 20%;
+}
+
+.optionGroup,
+.searchFor {
+  margin-bottom: 30px;
+}
+
+input {
+  margin-left: 10px;
+}

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { DataService } from '../service/data.service';
+import { DataService } from '../../service/data.service';
 
 @Component({
   selector: 'app-google',
@@ -7,10 +7,12 @@ import { DataService } from '../service/data.service';
   styleUrls: ['./google.component.css'],
 })
 export class GoogleComponent implements OnInit {
-  data: any;
-  constructor(private messegeService: DataService) {}
+  data: string;
+  constructor(private dataService: DataService) {}
 
   ngOnInit() {
-    this.messegeService.currentData.subscribe(data => (this.data = data));
+    this.dataService.currentData.subscribe(
+      (data: string) => (this.data = data)
+    );
   }
 }

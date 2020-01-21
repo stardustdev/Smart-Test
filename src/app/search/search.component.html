@@ -1,0 +1,28 @@
+<div class="container">
+  <h2>Search Component</h2>
+  <div class="searchFor">
+    Search for:
+    <input
+      type="text"
+      placeholder="Search"
+      [(ngModel)]="searchStr"
+      (keyup.enter)="search()"
+    />
+  </div>
+  <div class="optionGroup">
+    <input
+      type="radio"
+      name="search"
+      [(ngModel)]="checkedVal.options"
+      value="google"
+      checked="checked"
+    />Google
+    <input
+      type="radio"
+      name="search"
+      [(ngModel)]="checkedVal.options"
+      value="bing"
+    />Bing
+  </div>
+  <router-outlet></router-outlet>
+</div>

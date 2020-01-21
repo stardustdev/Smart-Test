@@ -1,0 +1,13 @@
+.container {
+  border: 1px solid black;
+  margin: auto;
+  margin-top: 50px;
+  padding: 10px;
+  text-align: center;
+  width: 20%;
+}
+
+span {
+  margin-right: 5px;
+  text-align: right;
+}
